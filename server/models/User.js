@@ -28,10 +28,10 @@ const UserSchema = new mongoose.Schema(
    type: 'String',
    default: "",
   },
-  // cart: {
-  //  type: 'Array',
-  //  default: []
-  // },
+  cart: {
+   type: 'Array',
+   default: []
+  },
   location: String,
   number: Number,
  },

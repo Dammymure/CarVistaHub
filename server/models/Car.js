@@ -6,10 +6,6 @@ const CarSchema = mongoose.Schema(
    type: String,
    require:true,
   },
-  sellerId:{
-   type: String,
-   require:true,
-  },
   make:{
    type: String,
    require:true,
@@ -30,8 +26,13 @@ const CarSchema = mongoose.Schema(
    type: String,
    require:true,
   },
-  status:{
+  description:{
    type: String,
+   require:true,
+  },
+  picturePaths:{
+   type: Array,
+   default:[],
    require:true,
   }
  }, { timestamps: true }

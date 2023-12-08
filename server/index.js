@@ -14,6 +14,8 @@ import authRoutes from "./routes/auth.js";
 import sellerRoutes from "./routes/sellerRoute.js";
 
 import { fileURLToPath } from "url";
+import { updateSeller } from "./controllers/seller.js";
+import { updateUser } from "./controllers/user.js";
 
 /* CONFIGURATIONS */
 const __filename = fileURLToPath(import.meta.url);
@@ -44,6 +46,8 @@ const upload = multer({ storage });
 /* ROUTES WITH FILES */
 app.post("/auth/registeruser", upload.single("picture"), userRegister);
 app.post("/auth/registerseller", upload.single("picture"), sellerRegister);
+app.put("/seller/update/:id", upload.single("picture"), updateSeller )
+app.put("/user/update/:id", upload.single("picture"), updateUser )
 
 app.post("/car", verifyToken, upload.array("pictures"),);
 

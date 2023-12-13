@@ -1,39 +1,51 @@
 import mongoose from "mongoose";
 
-const CarSchema = mongoose.Schema(
+const CarSchema = new mongoose.Schema(
  {
-  sellerId:{
+  sellerId: {
    type: String,
-   require:true,
+   require: true,
   },
-  make:{
+  sellerName: {
    type: String,
-   require:true,
+   require: true,
   },
-  model:{
+  sellerLocation: {
    type: String,
-   require:true,
+   require: true,
   },
-  year:{
+  make: {
    type: String,
-   require:true,
+   require: true,
   },
-  price:{
+  model: {
    type: String,
-   require:true,
+   require: true,
   },
-  description:{
+  year: {
    type: String,
-   require:true,
+   require: true,
   },
-  description:{
+  color: {
    type: String,
-   require:true,
+   require: true,
   },
-  picturePaths:{
+  mileage: {
+   type: String,
+   require: true,
+  },
+  price: {
+   type: String,
+   require: true,
+  },
+  description: {
+   type: String,
+   require: true,
+  },
+  picturePaths: {
    type: Array,
-   default:[],
-   require:true,
+   default: [],
+   require: true,
   }
  }, { timestamps: true }
 )

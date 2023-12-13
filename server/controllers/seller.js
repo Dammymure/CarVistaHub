@@ -34,3 +34,12 @@ export const updateSeller = async (req, res) =>{
   res.status(404).json({ message: err.message })
  }
 }
+
+// GET ALL CARS BY A SELLER
+export const getSellerCars = async (req, res) => {
+ try {
+  
+ } catch (error) {
+  
+ }
+}

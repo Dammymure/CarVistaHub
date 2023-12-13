@@ -12,10 +12,12 @@ import { userRegister } from "./controllers/authUser.js";
 import { sellerRegister } from "./controllers/authSeller.js";
 import authRoutes from "./routes/auth.js";
 import sellerRoutes from "./routes/sellerRoute.js";
+import carRoutes from "./routes/carRoutes.js";
 
 import { fileURLToPath } from "url";
 import { updateSeller } from "./controllers/seller.js";
 import { updateUser } from "./controllers/user.js";
+import { createCar, updateCar } from "./controllers/car.js";
 
 /* CONFIGURATIONS */
 const __filename = fileURLToPath(import.meta.url);
@@ -49,12 +51,13 @@ app.post("/auth/registerseller", upload.single("picture"), sellerRegister);
 app.put("/seller/update/:id", upload.single("picture"), updateSeller )
 app.put("/user/update/:id", upload.single("picture"), updateUser )
 
-app.post("/car", verifyToken, upload.array("pictures"),);
+app.post("/car", verifyToken, upload.array("pictures"), createCar);
+app.post("/car/update/:id", verifyToken, upload.array("pictures"), updateCar);
 
 // ROUTES
 app.use("/auth", authRoutes)
 app.use("/seller", sellerRoutes)
-// app.use("/cars", )
+app.use("/car", carRoutes)
 
 /* MONGOOSE SETUP */
 const PORT = process.env.PORT || 6001;

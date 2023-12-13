@@ -8,7 +8,8 @@ const router = express.Router()
 // READ
 router.get("/", verifyToken, allSellers)
 router.get("/:id", verifyToken, getSeller)
-// router.put("/update/:id", verifyToken, updateSeller)
+router.put("/update/:id", verifyToken, updateSeller)
+// router.get("/:id/cars", verifyToken, getSellerCars)
 
 
 export default router

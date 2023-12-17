@@ -22,10 +22,11 @@ export const createCar = async (req, res) =>{
    mileage,
    price,
    description,
+   available,
    picturePaths
   })
   // Automatically add the newly created car to the seller's cars array
-  seller.cars.push({carId:newCar._id, make:newCar.make}); 
+  seller.cars.push(newCar._id); 
   await seller.save();
   res.status(201).json({ msg: "Your car has been registered", newCar })
  }catch{

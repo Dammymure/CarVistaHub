@@ -11,7 +11,8 @@ import { verifyToken } from "./middleware/auth.js";
 import { userRegister } from "./controllers/authUser.js";
 import { sellerRegister } from "./controllers/authSeller.js";
 import authRoutes from "./routes/auth.js";
-import sellerRoutes from "./routes/sellerRoute.js";
+import sellerRoutes from "./routes/sellerRoutes.js";
+import userRoutes from "./routes/userRoutes.js";
 import carRoutes from "./routes/carRoutes.js";
 
 import { fileURLToPath } from "url";
@@ -56,6 +57,7 @@ app.post("/car/update/:id", verifyToken, upload.array("pictures"), updateCar);
 
 // ROUTES
 app.use("/auth", authRoutes)
+app.use("/user", userRoutes)
 app.use("/seller", sellerRoutes)
 app.use("/car", carRoutes)
 

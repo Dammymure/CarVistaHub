@@ -42,6 +42,10 @@ const CarSchema = new mongoose.Schema(
    type: String,
    require: true,
   },
+  available: {
+   type: Boolean,
+   default: true,
+  },
   picturePaths: {
    type: Array,
    default: [],

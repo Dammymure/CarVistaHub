@@ -10,8 +10,8 @@ router.get("/", verifyToken, allSellers)
 router.get("/:id", verifyToken, getSeller)
 
 // UPDATE
-router.put("/update/:id", verifyToken, updateSeller)
-router.get("/:id/cars", verifyToken, getSellerCars)
+router.put("/update/:sellerId", verifyToken, updateSeller)
+router.get("/:sellerId/cars", verifyToken, getSellerCars)
 
 
 export default router

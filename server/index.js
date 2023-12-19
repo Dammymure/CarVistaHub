@@ -49,11 +49,11 @@ const upload = multer({ storage });
 /* ROUTES WITH FILES */
 app.post("/auth/registeruser", upload.single("picture"), userRegister);
 app.post("/auth/registerseller", upload.single("picture"), sellerRegister);
-app.put("/seller/update/:id", upload.single("picture"), updateSeller )
-app.put("/user/update/:id", upload.single("picture"), updateUser )
+app.put("/seller/update/:sellerId", upload.single("picture"), updateSeller)
+app.put("/user/update/:userId", upload.single("picture"), updateUser)
 
 app.post("/car", verifyToken, upload.array("pictures"), createCar);
-app.post("/car/update/:id", verifyToken, upload.array("pictures"), updateCar);
+app.post("/car/update/:carId", verifyToken, upload.array("pictures"), updateCar);
 
 // ROUTES
 app.use("/auth", authRoutes)

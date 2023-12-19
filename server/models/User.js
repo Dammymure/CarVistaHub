@@ -30,7 +30,8 @@ const UserSchema = new mongoose.Schema(
   },
   cart: {
    type: 'Array',
-   default: []
+   default: [],
+   required: false,
   },
   location: String,
   number: Number,

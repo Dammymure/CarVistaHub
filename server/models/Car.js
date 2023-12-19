@@ -35,7 +35,7 @@ const CarSchema = new mongoose.Schema(
    require: true,
   },
   price: {
-   type: String,
+   type: Number,
    require: true,
   },
   description: {
@@ -45,6 +45,7 @@ const CarSchema = new mongoose.Schema(
   available: {
    type: Boolean,
    default: true,
+   require:false,
   },
   picturePaths: {
    type: Array,

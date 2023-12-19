@@ -4,7 +4,7 @@ import { verifyToken } from "../middleware/auth.js";
 
 const router = express.Router()
 
-router.get("/:id", verifyToken, getCar)
+router.get("/:carId", verifyToken, getCar)
 
 
 export default router

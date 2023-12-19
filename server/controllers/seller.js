@@ -40,22 +40,34 @@ export const updateSeller = async (req, res) => {
 // GET ALL CARS BY A SELLER
 export const getSellerCars = async (req, res) => {
  try {
-  const { id } = req.params
-  const seller = await Seller.findById(id)
+  const { sellerId } = req.params
+  const sellerCars = await Car.find({ sellerId })
+   res.status(200).json(sellerCars)
+//   const cars = await Promise.all(seller.cars.map((id) => Car.findById(id)))
 
-  const cars = await Promise.all(seller.cars.map((id) => Car.findById(id)))
-
-  const formattedCars = cars.map(({_id,sellerId, sellerName, sellerLocation,
-make, model, year, color, mileage, price, description, available, picturePaths
-  }) => {
-   return {
-    _id, sellerId, sellerName, sellerLocation,
-    make, model, year, color, mileage, price, description, available, picturePaths
-   }
-  })
-  res.status(200).json(formattedCars)
+//   const formattedCars = cars.map(({_id,sellerId, sellerName, sellerLocation,
+// make, model, year, color, mileage, price, description, available, picturePaths
+//   }) => {
+//    return {
+//     _id, sellerId, sellerName, sellerLocation,
+//     make, model, year, color, mileage, price, description, available, picturePaths
+//    }
+//   })
+//   res.status(200).json(formattedCars)
  } catch (error) {
   res.status(404).json({ message: error.message })
  }
+}
+
+export const carAvailable = async (req, res) => {
+  const { sellerId, carId } = req.params
+
+  const car = await Car.findById(carId)
+  if( sellerId !== car.sellerId){
+    res.status(404).json({ message:"Cannot perform this operation"})
+  }
+  // Toggle the value of 'completed'
+  car.available = !car.available;
+  await car.save();
 
 }

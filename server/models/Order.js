@@ -15,7 +15,7 @@ const OrderSchema = new mongoose.Schema(
    required: true,
   },
   quantity: {
-   type: String,
+   type: Number,
    required: true,
   },
   address: {
@@ -23,7 +23,7 @@ const OrderSchema = new mongoose.Schema(
    required: true,
   },
   carPicturePaths: {
-   type: String,
+   type: Array,
    required: true,
   },
   sellerName: {
@@ -33,6 +33,11 @@ const OrderSchema = new mongoose.Schema(
   sellerId: {
    type: String,
    required: true,
+  },
+  completed:{
+   type: Boolean,
+   default: true,
+   require: false,
   }
  },
  { timestamps: true }

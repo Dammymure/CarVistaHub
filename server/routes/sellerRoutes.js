@@ -1,6 +1,6 @@
 import express from "express"
 import { verifyToken } from "../middleware/auth.js"
-import { allSellers, getSeller, getSellerCars, updateSeller } from "../controllers/seller.js"
+import { allSellers, carAvailable, getSeller, getSellerCars, updateSeller } from "../controllers/seller.js"
 // import router from "./auth"
 
 const router = express.Router()
@@ -11,6 +11,7 @@ router.get("/:id", verifyToken, getSeller)
 
 // UPDATE
 router.put("/update/:sellerId", verifyToken, updateSeller)
+router.patch("/caravailable/:sellerId/:carId", verifyToken, carAvailable)
 router.get("/:sellerId/cars", verifyToken, getSellerCars)
 
 

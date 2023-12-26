@@ -11,8 +11,7 @@ export const sellerRegister = async (req, res) => {
    password,
    picturePath,
    location,
-   number,
-   cars
+   number
   } = req.body
 
   // check if a user already exists using the email
@@ -36,7 +35,7 @@ export const sellerRegister = async (req, res) => {
     cars
    })
    // const savedUser = await newUser.save()
-   res.status(201).json({ msg: "You have been registered", newSeller })
+   res.status(201).json(newSeller)
   }
  } catch (err) {
   res.status(500).json({ error: err.message })

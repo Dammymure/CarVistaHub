@@ -30,7 +30,8 @@ const SellerSchema = new mongoose.Schema(
   },
   cars: {
    type: Array,
-   default: []
+   default: [],
+   required: false
   },
   location: String,
   number: Number,

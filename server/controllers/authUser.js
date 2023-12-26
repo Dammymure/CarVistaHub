@@ -52,7 +52,7 @@ export const userRegister = async (req, res) => {
   newUser.cart = newCart._id;
   await newUser.save();
 
-  res.status(201).json({ msg: 'You have been registered', newUser });
+  res.status(201).json(newUser);
  } catch (err) {
   res.status(500).json({ error: err.message });
  }

@@ -7,11 +7,11 @@ function sellerRegisterLogin() {
       <div className="sm:w-[50%] w-full flex bg-black align-middle justify-center">
         <div className="flex content-center align-middle ">
           <form className="flex h-fit text-white flex-col m-auto px-10 text-xs">
-            <div className="flex-col sm:flex sm:flex-row gap-2">
+            <div className="flex-col lg:flex lg:flex-row gap-2">
               <div className="flex flex-col">
                 <label for="firstname">Firstname</label>
                 <input
-                  className="border bg-transparent h-5  w-40 sm:w-52 sm:h-7"
+                  className="border bg-transparent h-5 w-40 lg:w-52 lg:h-7"
                   type="text"
                   id="firstname"
                   name="firstname"
@@ -22,7 +22,7 @@ function sellerRegisterLogin() {
               <div className="flex flex-col">
                 <label for="lastname">Lastname</label>
                 <input
-                  className="border bg-transparent w-40 sm:w-52"
+                  className="border bg-transparent h-5 w-40 lg:w-52 lg:h-7"
                   type="text"
                   id="lastname"
                   name="lastname"
@@ -31,11 +31,11 @@ function sellerRegisterLogin() {
               </div>
             </div>
 
-            <div className="flex-col sm:flex sm:flex-row   gap-2">
+            <div className="flex-col lg:flex lg:flex-row   gap-2">
               <div className="flex flex-col">
                 <label for="number">Number</label>
                 <input
-                  className="border bg-transparent w-40 sm:w-52"
+                  className="border bg-transparent h-5 w-40 lg:w-52 lg:h-7"
                   type="text"
                   id="number"
                   name="number"
@@ -46,7 +46,7 @@ function sellerRegisterLogin() {
               <div className="flex flex-col">
                 <label for="location">Location</label>
                 <input
-                  className="border bg-transparent w-40 sm:w-52"
+                  className="border bg-transparent h-5 w-40 lg:w-52 lg:h-7"
                   type="text"
                   id="location"
                   name="location"
@@ -55,11 +55,11 @@ function sellerRegisterLogin() {
               </div>
             </div>
 
-            <div className="flex-col sm:flex sm:flex-row  gap-2">
+            <div className="flex-col lg:flex lg:flex-row  gap-2">
               <div className="flex flex-col">
                 <label for="email">Email</label>
                 <input
-                  className="border bg-transparent w-40 sm:w-52"
+                  className="border bg-transparent h-5 w-40 lg:w-52 lg:h-7"
                   type="email"
                   id="email"
                   name="email"
@@ -70,7 +70,7 @@ function sellerRegisterLogin() {
               <div className="flex flex-col">
                 <label for="password">Password</label>
                 <input
-                  className="border bg-transparent w-40 sm:w-52"
+                  className="border bg-transparent h-5 w-40 lg:w-52 lg:h-7"
                   type="password"
                   id="password"
                   name="password"
@@ -81,7 +81,7 @@ function sellerRegisterLogin() {
 
             <label for="picturePath">Picture</label>
             <input
-              className="border bg-transparent"
+              className="border bg-transparent h-7 w-40 lg:w-52 lg:h-14"
               type="file"
               id="picturePath"
               name="picturePath"

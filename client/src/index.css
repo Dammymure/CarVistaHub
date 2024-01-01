@@ -7,3 +7,10 @@
 @import 'tailwindcss/utilities'; */
 
 /* @import './styles/tailwind.css'; */
+
+.banner{
+ background-image: url('../src/assets/designImages/car2.jpg');
+ background-repeat: no-repeat;
+ background-position: center;
+ background-size: cover;
+}

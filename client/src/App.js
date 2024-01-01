@@ -1,6 +1,6 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import './App.css';
-import SellerRegister from './scenes/sellerRegisterLogin'
+import SellerRegister from './scenes/Register'
 
 function App() {
   return (

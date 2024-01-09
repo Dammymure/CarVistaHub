@@ -13,4 +13,43 @@
  background-repeat: no-repeat;
  background-position: center;
  background-size: cover;
+ border-top-left-radius: 20px;
+ border-bottom-left-radius: 20px;
+  transition: all ease 1s;
+}
+.seller{
+ background-image: url('../src/assets/designImages/dealer1.jpg');
+ background-repeat: no-repeat;
+ background-position: center;
+ background-size: cover;
+ border-top-left-radius: 20px;
+ border-bottom-left-radius: 20px;
+ transition:all ease 1s ;
+}
+
+.login{
+ background-image: url('../src/assets/designImages/car3.jpg');
+ background-repeat: no-repeat;
+ background-position: center;
+ background-size: cover;
+ border-top-left-radius: 20px;
+ border-bottom-left-radius: 20px;
+ transition:all ease 1s ;
+}
+.signin{
+ background-image: url('../src/assets/designImages/car4.jpg');
+ background-repeat: no-repeat;
+ background-position: center;
+ background-size: cover;
+ border-top-left-radius: 20px;
+ border-bottom-left-radius: 20px;
+ transition:all ease 1s ;
+}
+
+.heroimage{
+  background-image: url('../src/assets/designImages/car4.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    transition: all ease 1s;
 }

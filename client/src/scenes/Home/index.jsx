@@ -16,6 +16,7 @@ import lambo from "../../assets/carLogos/lambo.png"
 import hyundai from "../../assets/carLogos/hyundai.png";
 import porsche from "../../assets/carLogos/porsche.png";
 import CarMatch from "../../components/carmatch";
+import Filters from "../../components/filters";
 
 
 function Home() {
@@ -138,6 +139,9 @@ function Home() {
         <div></div>
       </section> */}
       <CarMatch/>
+      <div>
+        <Filters/>
+      </div>
     </div>
   );
 }

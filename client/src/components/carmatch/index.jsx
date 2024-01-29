@@ -26,7 +26,7 @@ function CarMatch() {
         </div>
         <div className="sm:w-[50%] p-12">
           <div className="text-center">
-            <h1 className="text-4xl font-medium">1,500,000</h1>
+            <h1 className="text-4xl font-medium">₦1,500,000</h1>
             <p className="font-medium">Est. buying power</p>
             <p className="font-medium text-slate-500">Based on 8.68% APR</p>
           </div>
@@ -48,7 +48,7 @@ function CarMatch() {
                   </select>
                 </div>
                 <div className="absolute right-0 pr-1">
-                  <img className="w-4" src={ArrowDown} />
+                  <img className="w-4" src={ArrowDown} alt=""/>
                 </div>
               </div>
               <div className=" bg-white pt- flex items-center rounded-[2px] w-[100%] border border-slate-600">
@@ -77,19 +77,19 @@ function CarMatch() {
                     aria-label="Looking for"
                     // class="bg-red-400"
                   >
-                    <option value="NEW">500,000 - 1,500,000</option>
-                    <option value="USED">1,500,500 - 3,500,000</option>
-                    <option value="USED">3,500,000 - 5,500,000</option>
-                    <option value="USED">5,500,000 - 8,500,000</option>
+                    <option value="NEW">₦500,000 - ₦1,500,000</option>
+                    <option value="USED">₦1,500,500 - ₦3,500,000</option>
+                    <option value="USED">₦3,500,000 - ₦5,500,000</option>
+                    <option value="USED">₦5,500,000 - ₦8,500,000</option>
                   </select>
                 </div>
                 <div className="absolute right-0 pr-1">
-                  <img className="w-4" src={ArrowDown} />
+                  <img className="w-4" src={ArrowDown} alt=""/>
                 </div>
               </div>
               <div className=" bg-white pt- flex items-center rounded-[2px] w-[100%] border border-slate-600">
                 <div className="relative rounded w-[100%]">
-                  <label className="absolute top-2 left-0 pl-1 text-xs text-slate-600 whitespace-nowrap font-medium font-medium">
+                  <label className="absolute top-2 left-0 pl-1 text-xs text-slate-600 whitespace-nowrap font-medium">
                     Monthly payment
                   </label>
                   <input

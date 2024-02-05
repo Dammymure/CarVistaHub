@@ -42,3 +42,4 @@ const SellerSchema = new mongoose.Schema(
 const Seller = mongoose.model('Seller', SellerSchema)
 
 export default Seller
+

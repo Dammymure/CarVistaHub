@@ -69,21 +69,23 @@ function Filters() {
   };
 
   return (
-    <section className="flex justify-center">
+    <section className="flex justify-center bg-black ">
       <div className="flex flex-col text-sm w-full max-w-md p-2 md:p-4">
         <div>
-          <h1 className="text-lg flex justify-center">FILTER</h1>
+          <h1 className="text-lg flex justify-center text-white">FILTER</h1>
         </div>
 
         <div className="flex gap-2 py-2 flex-wrap">
           <div>
-            <button className="bg-black px-4 py-1 rounded-full text-sm text-white mt-2">
+            <button className="border bg-white px-4 py-1 rounded-full text-sm text-black mt-2 font-medium hover:text-white hover:border-white hover:border hover:bg-black ease-in duration-200">
               All
             </button>
           </div>
 
           <div className="w-full">
-            <label className="text-sm pr-1 font-medium mt-2">Price</label>
+            <label className="text-sm pr-1 font-medium mt-2 text-white">
+              Price
+            </label>
             <div className="flex gap-2">
               <input
                 className="w-20 sm:w-full flex-grow border border-slate-600 rounded-sm"
@@ -108,7 +110,9 @@ function Filters() {
           </div>
 
           <div className="w-full">
-            <label className="text-sm pr-1 font-medium mt-2">Make</label>
+            <label className="text-sm pr-1 font-medium mt-2 text-white">
+              Make
+            </label>
             <select
               className="w-full border border-slate-600 rounded-sm"
               required=""
@@ -132,7 +136,9 @@ function Filters() {
 
         <div className="flex align-middle items-center py-2 flex-wrap">
           <div className="w-full">
-            <label className="text-sm pr-1 font-medium mt-2">Year</label>
+            <label className="text-sm pr-1 font-medium mt-2 text-white">
+              Year
+            </label>
             <div className="flex gap-2">
               <select
                 required=""
@@ -166,8 +172,10 @@ function Filters() {
             </div>
           </div>
 
-          <div className="w-full">
-            <label className="text-sm pr-1 font-medium mt-2">Mileage</label>
+          <div className="w-full py-2 ">
+            <label className="text-sm pr-1 font-medium mt-2 text-white">
+              Mileage
+            </label>
             <div className="flex gap-2">
               <input
                 className="w-20 sm:w-full flex-grow border border-slate-600 rounded-sm"
@@ -193,7 +201,7 @@ function Filters() {
         </div>
 
         <div className="flex justify-center mt-2">
-          <button className="bg-black text-white px-4 py-2 rounded-full">
+          <button className="bg-[#FE5F00] font-medium text-white px-4 py-2 rounded-full hover:opacity-75 ease-in duration-200">
             Submit
           </button>
         </div>
